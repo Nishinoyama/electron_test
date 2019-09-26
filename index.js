@@ -1,9 +1,10 @@
 
 const {ipcRenderer} = require('electron');
 
-let flag;
+
 
 window.onload = function(){
+
 }
 
 function sendAndReply( mes ){

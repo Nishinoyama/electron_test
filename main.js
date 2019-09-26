@@ -25,5 +25,6 @@ app.on( 'ready', () => {
 const { ipcMain } = require('electron');
 ipcMain.on('message', (event, arg) => {
     console.log(arg);
-    event.returnValue = arg;
+    event.returnValue = arg; 
 });
+
