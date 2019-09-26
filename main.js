@@ -6,10 +6,6 @@ let mainWindow = null;
 
 let flag = 114514;
 
-function mo(){
-    return flag;
-}
-
 app.on( 'ready', () => {
 
     mainWindow = new BrowserWindow({
