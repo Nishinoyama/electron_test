@@ -3,35 +3,37 @@
 
 window.onload = function(){
     document.body.appendChild( app.view );
+
     app.stage.addChild( basedCircle );
     app.stage.addChild( dotContainer );
-    app.renderer.plugins.interaction.on('pointerdowm', onPointerDown );
     app.stage.addChild( result );
+    app.stage.interactive = true;
+    app.stage.on('click', putPoint );
 
     basedCircle.lineStyle( 3, 0x000000, 1 );
     basedCircle.beginFill( 0xFFFFFF, 1 );
     basedCircle.drawCircle( 200,200,200 );
     basedCircle.endFill();
 
-
-    this.setInterval( onPointerDown, 10 );
-
 }
- 
+
 const app = new PIXI.Application({
     width: 400, height: 500,
-    backgroundColor: 0xFFFFFF,
+    backgroundColor: 0xFFDDDD,
     resolution: window.devicePixelRatio || 1,
 });
 
 const basedCircle = new PIXI.Graphics();
 const dotContainer = new PIXI.Container();
-const result = new PIXI.Text('あたり率 0% 円周率 0');
+const result = new PIXI.Text('あたり率 0%\n円周率 0');
 result.y = 400;
 
-function onPointerDown() {
+function putPoint() {
 
     let dotPointed = new PIXI.Graphics();
+
+    // const position = app.renderer.plugins.interaction.mouse.getLocalPosition(app.stage);
+    // console.log(position);
 
     let x = Math.random() * 400;
     let y = Math.random() * 400;
@@ -57,7 +59,7 @@ function onPointerDown() {
     hitProb = hitIn/hitNum;
     calcPI = 4*hitProb;
 
-    result.text = 'あたり率 ' + hitProb + '%\n円周率 ' + calcPI;
+    result.text = 'あたり率 ' + hitProb*100 + '%\n円周率 ' + calcPI;
 
 }
 
