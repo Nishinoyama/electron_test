@@ -1,0 +1,61 @@
+
+@function aColor( $hue ){
+    @return hsl( $hue, 97%, 84% );
+}
+@function aColorHovered( $hue ){
+    @return hsl( $hue, 97%, 74% );
+}
+@function aColorActived( $hue ){
+    @return hsl( $hue+10 , 97%, 84% );
+}
+
+$contentsColor: hsl(25, 97%, 84% );
+$contentsColorHoverd: hsl(25, 97%, 74% );
+$contentsColorActived: hsl(35, 97%, 74% );
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    li{
+        text-align: center;
+        width: calc(100%/3);
+        a{
+            color: black;
+            display: block;
+            background-color: $contentsColor; 
+            &:hover{
+                background-color: $contentsColorHoverd; 
+            }
+            &:active{
+                background-color: $contentsColorActived; 
+            }
+        }
+    }
+}
+
+section{
+    display: block;
+}
+
+.boxbox{
+    height: 20px;
+    @for $i from 0 through 25 {
+        .box#{$i} {
+            background-color: hsl( $i*10 , 100%, 50% );
+            float: left;
+            width: calc(100%/26);
+            height: 20px;
+        }
+    }
+}
+
+
+footer{
+    padding: 12px;
+    background-color: hsl(7, 28%, 11%);
+    p{
+        text-align: center;
+        color: white;
+    }
+}
