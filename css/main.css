@@ -1,4 +1,8 @@
-ul {
+body {
+  padding: 12px;
+}
+
+ul.aList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7,213 +11,657 @@ ul {
   list-style-type: none;
 }
 
-ul li {
+ul.aList li {
   text-align: center;
   width: calc(100%/3);
+  display: block;
+  background-color: #fad0b3;
 }
 
-ul li a {
+ul.aList li:hover {
+  background-color: #f6b383;
+}
+
+ul.aList li a {
   color: black;
   display: block;
-  background-color: #fed0af;
 }
 
-ul li a:hover {
-  background-color: #fdb27c;
-}
-
-ul li a:active {
-  background-color: #fdc77c;
+ul.aList li a:active {
+  background-color: #f6c683;
 }
 
 section {
   display: block;
 }
 
+#graduation {
+  display: table;
+  width: 100%;
+}
+
 .boxbox {
   height: 20px;
 }
 
+@-webkit-keyframes appearBox {
+  from {
+    -webkit-transform: rotate(-315deg) scale(0.698);
+            transform: rotate(-315deg) scale(0.698);
+  }
+  to {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes appearBox {
+  from {
+    -webkit-transform: rotate(-315deg) scale(0.698);
+            transform: rotate(-315deg) scale(0.698);
+  }
+  to {
+    -webkit-transform: rotate(0deg) scale(1);
+            transform: rotate(0deg) scale(1);
+  }
+}
+
 .boxbox .box0 {
-  background-color: red;
+  background-color: #ebadad;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 0.8s 1 ease-in-out;
+          animation: appearBox 0.8s 1 ease-in-out;
+}
+
+.boxbox .box0:hover {
+  background-color: #d65c5c;
+  cursor: pointer;
+}
+
+.boxbox .box0:active {
+  background-color: #e05252;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box1 {
-  background-color: #ff2b00;
+  background-color: #ebb9ad;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 0.83s 1 ease-in-out;
+          animation: appearBox 0.83s 1 ease-in-out;
+}
+
+.boxbox .box1:hover {
+  background-color: #d6725c;
+  cursor: pointer;
+}
+
+.boxbox .box1:active {
+  background-color: #e06c52;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box2 {
-  background-color: #ff5500;
+  background-color: #ebc4ad;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 0.86s 1 ease-in-out;
+          animation: appearBox 0.86s 1 ease-in-out;
+}
+
+.boxbox .box2:hover {
+  background-color: #d6895c;
+  cursor: pointer;
+}
+
+.boxbox .box2:active {
+  background-color: #e08652;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box3 {
-  background-color: #ff8000;
+  background-color: #ebcfad;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 0.89s 1 ease-in-out;
+          animation: appearBox 0.89s 1 ease-in-out;
+}
+
+.boxbox .box3:hover {
+  background-color: #d69f5c;
+  cursor: pointer;
+}
+
+.boxbox .box3:active {
+  background-color: #e0a052;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box4 {
-  background-color: #ffaa00;
+  background-color: #ebdaad;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 0.92s 1 ease-in-out;
+          animation: appearBox 0.92s 1 ease-in-out;
+}
+
+.boxbox .box4:hover {
+  background-color: #d6b65c;
+  cursor: pointer;
+}
+
+.boxbox .box4:active {
+  background-color: #e0ba52;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box5 {
-  background-color: #ffd500;
+  background-color: #ebe6ad;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 0.95s 1 ease-in-out;
+          animation: appearBox 0.95s 1 ease-in-out;
+}
+
+.boxbox .box5:hover {
+  background-color: #d6cc5c;
+  cursor: pointer;
+}
+
+.boxbox .box5:active {
+  background-color: #e0d552;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box6 {
-  background-color: yellow;
+  background-color: #e4ebad;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 0.98s 1 ease-in-out;
+          animation: appearBox 0.98s 1 ease-in-out;
+}
+
+.boxbox .box6:hover {
+  background-color: #cad65c;
+  cursor: pointer;
+}
+
+.boxbox .box6:active {
+  background-color: #d2e052;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box7 {
-  background-color: #d5ff00;
+  background-color: #d9ebad;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.01s 1 ease-in-out;
+          animation: appearBox 1.01s 1 ease-in-out;
+}
+
+.boxbox .box7:hover {
+  background-color: #b4d65c;
+  cursor: pointer;
+}
+
+.boxbox .box7:active {
+  background-color: #b8e052;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box8 {
-  background-color: #aaff00;
+  background-color: #ceebad;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.04s 1 ease-in-out;
+          animation: appearBox 1.04s 1 ease-in-out;
+}
+
+.boxbox .box8:hover {
+  background-color: #9dd65c;
+  cursor: pointer;
+}
+
+.boxbox .box8:active {
+  background-color: #9ee052;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box9 {
-  background-color: #80ff00;
+  background-color: #c3ebad;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.07s 1 ease-in-out;
+          animation: appearBox 1.07s 1 ease-in-out;
+}
+
+.boxbox .box9:hover {
+  background-color: #87d65c;
+  cursor: pointer;
+}
+
+.boxbox .box9:active {
+  background-color: #84e052;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box10 {
-  background-color: #55ff00;
+  background-color: #b8ebad;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.1s 1 ease-in-out;
+          animation: appearBox 1.1s 1 ease-in-out;
+}
+
+.boxbox .box10:hover {
+  background-color: #70d65c;
+  cursor: pointer;
+}
+
+.boxbox .box10:active {
+  background-color: #69e052;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box11 {
-  background-color: #2bff00;
+  background-color: #adebae;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.13s 1 ease-in-out;
+          animation: appearBox 1.13s 1 ease-in-out;
+}
+
+.boxbox .box11:hover {
+  background-color: #5cd65e;
+  cursor: pointer;
+}
+
+.boxbox .box11:active {
+  background-color: #52e054;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box12 {
-  background-color: lime;
+  background-color: #adebba;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.16s 1 ease-in-out;
+          animation: appearBox 1.16s 1 ease-in-out;
+}
+
+.boxbox .box12:hover {
+  background-color: #5cd674;
+  cursor: pointer;
+}
+
+.boxbox .box12:active {
+  background-color: #52e06e;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box13 {
-  background-color: #00ff2b;
+  background-color: #adebc5;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.19s 1 ease-in-out;
+          animation: appearBox 1.19s 1 ease-in-out;
+}
+
+.boxbox .box13:hover {
+  background-color: #5cd68b;
+  cursor: pointer;
+}
+
+.boxbox .box13:active {
+  background-color: #52e088;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box14 {
-  background-color: #00ff55;
+  background-color: #adebd0;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.22s 1 ease-in-out;
+          animation: appearBox 1.22s 1 ease-in-out;
+}
+
+.boxbox .box14:hover {
+  background-color: #5cd6a1;
+  cursor: pointer;
+}
+
+.boxbox .box14:active {
+  background-color: #52e0a3;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box15 {
-  background-color: #00ff80;
+  background-color: #adebdb;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.25s 1 ease-in-out;
+          animation: appearBox 1.25s 1 ease-in-out;
+}
+
+.boxbox .box15:hover {
+  background-color: #5cd6b8;
+  cursor: pointer;
+}
+
+.boxbox .box15:active {
+  background-color: #52e0bd;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box16 {
-  background-color: #00ffaa;
+  background-color: #adebe7;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.28s 1 ease-in-out;
+          animation: appearBox 1.28s 1 ease-in-out;
+}
+
+.boxbox .box16:hover {
+  background-color: #5cd6ce;
+  cursor: pointer;
+}
+
+.boxbox .box16:active {
+  background-color: #52e0d7;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box17 {
-  background-color: #00ffd5;
+  background-color: #ade3eb;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.31s 1 ease-in-out;
+          animation: appearBox 1.31s 1 ease-in-out;
+}
+
+.boxbox .box17:hover {
+  background-color: #5cc8d6;
+  cursor: pointer;
+}
+
+.boxbox .box17:active {
+  background-color: #52d0e0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box18 {
-  background-color: cyan;
+  background-color: #add8eb;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.34s 1 ease-in-out;
+          animation: appearBox 1.34s 1 ease-in-out;
+}
+
+.boxbox .box18:hover {
+  background-color: #5cb1d6;
+  cursor: pointer;
+}
+
+.boxbox .box18:active {
+  background-color: #52b6e0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box19 {
-  background-color: #00d5ff;
+  background-color: #adcdeb;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.37s 1 ease-in-out;
+          animation: appearBox 1.37s 1 ease-in-out;
+}
+
+.boxbox .box19:hover {
+  background-color: #5c9bd6;
+  cursor: pointer;
+}
+
+.boxbox .box19:active {
+  background-color: #529be0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box20 {
-  background-color: #00aaff;
+  background-color: #adc2eb;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.4s 1 ease-in-out;
+          animation: appearBox 1.4s 1 ease-in-out;
+}
+
+.boxbox .box20:hover {
+  background-color: #5c85d6;
+  cursor: pointer;
+}
+
+.boxbox .box20:active {
+  background-color: #5281e0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box21 {
-  background-color: #0080ff;
+  background-color: #adb7eb;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.43s 1 ease-in-out;
+          animation: appearBox 1.43s 1 ease-in-out;
+}
+
+.boxbox .box21:hover {
+  background-color: #5c6ed6;
+  cursor: pointer;
+}
+
+.boxbox .box21:active {
+  background-color: #5267e0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box22 {
-  background-color: #0055ff;
+  background-color: #afadeb;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.46s 1 ease-in-out;
+          animation: appearBox 1.46s 1 ease-in-out;
+}
+
+.boxbox .box22:hover {
+  background-color: #605cd6;
+  cursor: pointer;
+}
+
+.boxbox .box22:active {
+  background-color: #5652e0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box23 {
-  background-color: #002bff;
+  background-color: #bbadeb;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.49s 1 ease-in-out;
+          animation: appearBox 1.49s 1 ease-in-out;
+}
+
+.boxbox .box23:hover {
+  background-color: #765cd6;
+  cursor: pointer;
+}
+
+.boxbox .box23:active {
+  background-color: #7152e0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box24 {
-  background-color: blue;
+  background-color: #c6adeb;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.52s 1 ease-in-out;
+          animation: appearBox 1.52s 1 ease-in-out;
+}
+
+.boxbox .box24:hover {
+  background-color: #8d5cd6;
+  cursor: pointer;
+}
+
+.boxbox .box24:active {
+  background-color: #8b52e0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .boxbox .box25 {
-  background-color: #2b00ff;
+  background-color: #d1adeb;
   float: left;
   width: calc(100%/26);
-  height: 20px;
+  height: 60px;
+  text-align: center;
+  -webkit-transition: 0.1s ease-in;
+  transition: 0.1s ease-in;
+  -webkit-animation: appearBox 1.55s 1 ease-in-out;
+          animation: appearBox 1.55s 1 ease-in-out;
+}
+
+.boxbox .box25:hover {
+  background-color: #a35cd6;
+  cursor: pointer;
+}
+
+.boxbox .box25:active {
+  background-color: #a552e0;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 footer {

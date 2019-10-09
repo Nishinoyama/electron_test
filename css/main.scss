@@ -1,32 +1,27 @@
 
-@function aColor( $hue ){
-    @return hsl( $hue, 97%, 84% );
-}
-@function aColorHovered( $hue ){
-    @return hsl( $hue, 97%, 74% );
-}
-@function aColorActived( $hue ){
-    @return hsl( $hue+10 , 97%, 84% );
+$contentsColor: hsl(25, 87%, 84% );
+$contentsColorHoverd: hsl(25, 87%, 74% );
+$contentsColorActived: hsl(35, 87%, 74% );
+
+body{
+    padding: 12px;
 }
 
-$contentsColor: hsl(25, 97%, 84% );
-$contentsColorHoverd: hsl(25, 97%, 74% );
-$contentsColorActived: hsl(35, 97%, 74% );
-
-ul{
+ul.aList{
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
     li{
         text-align: center;
         width: calc(100%/3);
+        display: block;
+        background-color: $contentsColor; 
+        &:hover{
+            background-color: $contentsColorHoverd; 
+        }
         a{
             color: black;
             display: block;
-            background-color: $contentsColor; 
-            &:hover{
-                background-color: $contentsColorHoverd; 
-            }
             &:active{
                 background-color: $contentsColorActived; 
             }
@@ -38,14 +33,38 @@ section{
     display: block;
 }
 
+#graduation{
+    display: table;
+    width: 100%;
+}
+
 .boxbox{
     height: 20px;
+    @keyframes appearBox {
+       from{
+           transform: rotate(-315deg) scale(0.698);
+       }
+       to{
+           transform: rotate(0deg) scale(1.0);
+       } 
+    }
     @for $i from 0 through 25 {
         .box#{$i} {
-            background-color: hsl( $i*10 , 100%, 50% );
+            background-color: hsl( $i*11 , 60%, 80% );
             float: left;
             width: calc(100%/26);
-            height: 20px;
+            height: 60px;
+            text-align: center;
+            transition: 0.1s ease-in;
+            animation: appearBox $i*0.03s+0.8s 1 ease-in-out;
+            &:hover{
+                background-color: hsl( $i*11 , 60%, 60% );
+                cursor: pointer;
+            }
+            &:active{
+                background-color: hsl( $i*11 , 70%, 60% );
+                transform: scale(1.5);
+            }
         }
     }
 }
