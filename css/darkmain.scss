@@ -1,10 +1,14 @@
 
-$contentsColor: hsl(25, 87%, 84% );
-$contentsColorHoverd: hsl(25, 87%, 74% );
-$contentsColorActived: hsl(35, 87%, 74% );
+$contentsColor: hsl(125, 47%, 24% );
+$contentsColorHoverd: hsl(125, 47%, 34% );
+$contentsColorActived: hsl(135, 47%, 34% );
+
+$darkThemeBackGround: hsl(223, 52%, 7% );
+$darkThemeTextColor: hsl(223, 42%, 93% );
 
 body{
-    padding: 12px;
+    background-color: $darkThemeBackGround;
+    color: $darkThemeTextColor; 
 }
 
 ul.aList{
@@ -21,6 +25,7 @@ ul.aList{
         }
         a{
             color: inherit;
+            text-decoration-line: none;
             display: block;
             &:active{
                 background-color: $contentsColorActived; 
@@ -31,6 +36,7 @@ ul.aList{
 
 section{
     display: block;
+    padding: 12px;
 }
 
 #graduation{
@@ -50,7 +56,7 @@ section{
     }
     @for $i from 0 through 25 {
         .box#{$i} {
-            background-color: hsl( $i*11 , 60%, 80% );
+            background-color: hsl( $i*11 , 60%, 20% );
             float: left;
             width: calc(100%/26);
             height: 60px;
@@ -58,23 +64,24 @@ section{
             transition: 0.1s ease-in;
             animation: appearBox $i*0.03s+0.8s 1 ease-in-out;
             &:hover{
-                background-color: hsl( $i*11 , 60%, 60% );
+                background-color: hsl( $i*11 , 60%, 30% );
                 cursor: pointer;
             }
             &:active{
-                background-color: hsl( $i*11 , 70%, 60% );
+                background-color: hsl( $i*11 , 70%, 30% );
                 transform: scale(1.5);
             }
         }
     }
 }
 
+hr{
+    border: 2px inset hsl(223, 55%, 10%);
+}
 
 footer{
     padding: 12px;
-    background-color: hsl(7, 28%, 11%);
-    p{
-        text-align: center;
-        color: white;
-    }
+    background-color: hsl(223, 58%, 11%);
+    text-align: center;
+    color: bisque;
 }
