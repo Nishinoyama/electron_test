@@ -1,0 +1,33 @@
+
+body{
+    overflow: hidden;
+    // 文字の選択（ドラッグによる変色）を禁止する3行
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#gameFrame{
+    display: block;
+    overflow: hidden;
+    width: 600px;
+    height: 500px;
+    #mainFrame{
+        width: 400px;
+        height: 600px;
+        float: left;
+        background-color: hsl(0, 44%, 22%);
+    }
+    #menuFrame{
+        width: 200px;
+        height: 600px;
+        float: left;
+        background-color: hsl(188, 44%, 22%);
+        button{
+            width: 100%;
+            text-align: left;
+        }
+    }
+}
